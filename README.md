@@ -7,4 +7,4 @@ This inspired me to create StickyNote, a simple yet fun way to organize and deco
 
 So far I have only implemented basic features such as adding/completing tasks and a points counter, along with basic random customization. In the future, I plan to add more to the rewards system with things such as stickers, or fridge magnets!
 
-This project utilizes HTML, CSS, JavaScript, DOM (Document Object Model) and jQuery.
+This project utilizes HTML, CSS, JavaScript, DOM (Document Object Model).
