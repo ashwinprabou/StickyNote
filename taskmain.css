@@ -1,0 +1,193 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f92e;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.header {
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+}
+
+.container {
+    position: relative;
+    background-size: 20px 35px;
+    background-image:  repeating-linear-gradient(0deg, #000000, #000000 1px, #f9f28a 1px, #eaef5b);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    width: 300px;
+    opacity: 0.8;
+}
+
+.container .box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    width: 400px;
+    height: 400px;
+    background-color: #000000;
+    box-shadow: 0px 2px 30px -20px rgb(0 0 0);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.2s;
+}
+
+.container .box .drag{
+    font-size: 15px;
+    text-align: center;
+    color: #fff;
+    margin: 10;
+    padding: 0;
+}
+
+.container .box .heading{
+    font-size: 25px;
+    text-align: center;
+    padding: 6px;
+    margin: 0;
+    margin-bottom: 10px;
+    color: #fff;
+    background-color: #0ea7de;
+
+}
+
+.container .box .closeButton{
+    position: relative;
+    background-color: #0ea7de;
+    color: #fff;
+    font-size: 18px;
+    padding: 8px 14px;
+    border: none;
+    cursor: pointer;
+    left: 310px;
+    top: 248px;
+}
+
+.container .box .randomColor{
+    position: relative;
+    background-color: #0ea7de;
+    color: #fff;
+    font-size: 18px;
+    padding: 8px 14px;
+    border: none;
+    cursor: pointer;
+    left: -60px;
+    top: 10px;
+}
+
+.container .box .randomColor:hover {
+    background-color: #4c80ae97;
+}
+.container .box .closeButton:hover {
+    background-color: #4c80ae97;
+}
+
+.container .box_active{
+    opacity: 1;
+    pointer-events: fill;
+}
+
+.points-counter {
+    position: absolute;
+    top: 10px;
+    left: px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.container .customize{
+    position: relative;
+    left: 237px;
+    bottom: 94px;
+    padding: 10px;
+    border: none;
+    background-color: #000000;
+    color: rgb(243, 228, 92);
+    cursor: pointer;
+}
+
+.container .customize:hover {
+    background-color: #4cae4c;
+}
+
+.task-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.task-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.task-input button {
+    padding: 10px;
+    border: 1px solid #FFFFFF;
+    background-color: #000000;
+    color: rgb(243, 228, 92);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.task-input button:hover {
+    background-color: #4cae4c;
+}
+
+.task-input .clearTask {
+    position: absolute;
+    bottom: 10px;
+    left: 243px;
+    width: 77px;
+}
+.task-list li {
+    bottom: 40px;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    position: relative;
+    font-size: 20px;
+}
+
+.task-list li:last-child {
+    border-bottom: none;
+}
+
+.task-list input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.task-list input[type="checkbox"]:checked + label {
+    text-decoration: line-through;
+    color: #000000;
+}
+
+
+.points-animation {
+    position: absolute;
+    color: green;
+    font-weight: bold;
+    animation: fadeOutUp 1s forwards;
+}
+
+@keyframes fadeOutUp {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
